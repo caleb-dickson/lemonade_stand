@@ -4,6 +4,7 @@ import com.cooksys.lemonadestand.model.LemonadeRequestDto;
 import com.cooksys.lemonadestand.model.LemonadeResponseDto;
 import com.cooksys.lemonadestand.services.LemonadeService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class LemonadeController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public LemonadeResponseDto createLemonade(@RequestBody LemonadeRequestDto lemonadeRequestDto) {
         return lemonadeService.createLemonade(lemonadeRequestDto);
     }

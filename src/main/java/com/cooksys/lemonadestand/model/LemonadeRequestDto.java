@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 public class LemonadeRequestDto {
 
-    private double lemonJuice;
-    private double water;
-    private double sugar;
-    private int iceCubes;
+    private Double lemonJuice;
+    private Double water;
+    private Double sugar;
+    private Integer iceCubes;
 }
