@@ -31,4 +31,10 @@ public class LemonadeController {
     public LemonadeResponseDto getLemonadeById(@PathVariable Long id) {
         return lemonadeService.getLemonadeById(id);
     }
+
+    @PutMapping("{id}")
+    public LemonadeResponseDto updateLemonade(@PathVariable Long id, @RequestBody LemonadeRequestDto lemonadeRequestDto) {
+        return lemonadeService.updateLemonade(id, lemonadeRequestDto);
+    }
+
 }
