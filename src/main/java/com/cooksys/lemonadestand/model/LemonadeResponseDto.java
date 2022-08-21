@@ -9,5 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class LemonadeResponseDto {
     private Long id;
+    private double lemonJuice;
+    private double water;
+    private double sugar;
+    private int iceCubes;
     private double price;
 }

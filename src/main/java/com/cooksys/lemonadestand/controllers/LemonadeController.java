@@ -24,4 +24,9 @@ public class LemonadeController {
     public LemonadeResponseDto createLemonade(@RequestBody LemonadeRequestDto lemonadeRequestDto) {
         return lemonadeService.createLemonade(lemonadeRequestDto);
     }
+
+    @GetMapping("/{id}")
+    public LemonadeResponseDto getLemonadeById(@PathVariable Long id) {
+        return lemonadeService.getLemonadeById(id);
+    }
 }
